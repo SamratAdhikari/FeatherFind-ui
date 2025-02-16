@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loraFont {
+    font-family: "Lora", serif;
+}
