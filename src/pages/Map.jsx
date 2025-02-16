@@ -3,24 +3,12 @@ import Togglebar from "../components/Togglebar/Togglebar";
 import "../../src/index.css";
 import { createContext, useEffect, useState } from "react";
 import Spectrogram from "../components/Record/Record";
-// import ChatBot from "../components/ChatBot/ChatBox";
-// import { FaComments } from "react-icons/fa"; // Import icon for chat toggle button
 
 export const MapContext = createContext();
 
 const Map = () => {
     const [page, setPage] = useState("map");
     const [birdclass, setBirdclass] = useState(null);
-    const [isChatOpen, setIsChatOpen] = useState(false); // State to control if chat is open
-    const [username, setUsername] = useState(null);
-
-    useEffect(() => {
-        const user = localStorage.getItem("username");
-
-        if (user) {
-            setUsername(user);
-        }
-    }, []);
 
     return (
         <>
@@ -41,7 +29,6 @@ const Map = () => {
                     {page === "map" ? <MapComponent /> : <Spectrogram />}
                 </div>
             </MapContext.Provider>
-
         </>
     );
 };

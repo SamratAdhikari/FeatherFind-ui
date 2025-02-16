@@ -56,13 +56,11 @@ const Navbar = () => {
                                 Home
                             </Link>
                         </li>
-                        {username && (
-                            <li>
-                                <Link to="/user" className="text-inherit">
-                                    Map
-                                </Link>
-                            </li>
-                        )}
+                        <li>
+                            <Link to="/user" className="text-inherit">
+                                Map
+                            </Link>
+                        </li>
                         <li>
                             <Link to="/pricing" className="text-inherit">
                                 Pricing
