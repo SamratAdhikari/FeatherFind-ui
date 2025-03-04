@@ -40,16 +40,19 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-primary h-16 flex justify-center items-center w-full">
+        <nav className="bg-[#02542D] h-16 flex justify-center items-center w-full">
             <div className="w-[95%] md:w-[85%] flex justify-between items-center">
-                <div>
+                <div className="flex items-center justify-between w-[10%]">
                     <img
-                        src="/assets/favicon.png"
+                        src="/assets/logo.png"
                         alt="logo"
-                        className="w-[10%]"
+                        className="w-12"
                     />
+                    <span className="text-xl font-semibold text-background">
+                        FeatherFind
+                    </span>
                 </div>
-                <div className="hidden md:block md:w-[60%] lg:w-[50%]">
+                <div className="hidden md:block md:w-[40%] lg:w-[30%]">
                     <ul className="flex justify-between text-background font-semibold text-md md:text-lg">
                         <li>
                             <Link to="/" className="text-inherit">
@@ -61,58 +64,49 @@ const Navbar = () => {
                                 Map
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/pricing" className="text-inherit">
                                 Pricing
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/contact" className="text-inherit">
                                 Contact
                             </Link>
                         </li>
-                        <li className="relative">
-                            {username ? (
-                                <div className="relative">
-                                    <CircleUserRound
-                                        className="text-secondary cursor-pointer"
-                                        onClick={() =>
-                                            setShowDropdown((prev) => !prev)
-                                        }
-                                    />
-                                    {showDropdown && (
-                                        <div
-                                            ref={dropdownRef}
-                                            className="absolute right-0 mt-2 w-20 bg-white shadow-md rounded-md z-10"
-                                        >
-                                            <ul className="py-2">
-                                                <li
-                                                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-textSecondary text-sm"
-                                                    onClick={() =>
-                                                        navigate("/user")
-                                                    }
-                                                >
-                                                    Map
-                                                </li>
-                                                <li
-                                                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-textSecondary text-sm"
-                                                    onClick={logout}
-                                                >
-                                                    Logout
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    )}
-                                </div>
-                            ) : (
-                                <NavLink
-                                    to="/login"
-                                    className="bg-sky-500 text-white px-4 py-2 rounded-md font-bold"
-                                >
-                                    Login
-                                </NavLink>
-                            )}
-                        </li>
+                        {/* <li className="relative">
+                            <div className="relative">
+                                <CircleUserRound
+                                    className="text-secondary cursor-pointer"
+                                    onClick={() =>
+                                        setShowDropdown((prev) => !prev)
+                                    }
+                                />
+                                {showDropdown && (
+                                    <div
+                                        ref={dropdownRef}
+                                        className="absolute right-0 mt-2 w-20 bg-white shadow-md rounded-md z-10"
+                                    >
+                                        <ul className="py-2">
+                                            <li
+                                                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-textSecondary text-sm"
+                                                onClick={() =>
+                                                    navigate("/user")
+                                                }
+                                            >
+                                                Map
+                                            </li>
+                                            <li
+                                                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-textSecondary text-sm"
+                                                onClick={logout}
+                                            >
+                                                Logout
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>
+                        </li> */}
                     </ul>
                 </div>
             </div>
