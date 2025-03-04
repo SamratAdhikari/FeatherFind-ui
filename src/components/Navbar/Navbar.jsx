@@ -40,7 +40,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-gray-600 h-16 flex justify-center items-center w-full">
+        <nav className="bg-primary h-16 flex justify-center items-center w-full">
             <div className="w-[95%] md:w-[85%] flex justify-between items-center">
                 <div>
                     <img
