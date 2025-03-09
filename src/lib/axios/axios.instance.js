@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const SERVER_IP = "https://773d-139-5-71-198.ngrok-free.app";
+export const SERVER_IP = "http://172.16.103.162:8000";
 
 const server = axios.create({
     baseURL: SERVER_IP,
